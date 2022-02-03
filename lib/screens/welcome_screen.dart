@@ -10,6 +10,7 @@ class WelcomeScreen extends StatefulWidget {
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
   final name = Get.parameters["name"];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

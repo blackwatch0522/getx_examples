@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_examples/screens/home_screen.dart';
+import 'package:getx_examples/screens/login_screen.dart';
 import 'package:getx_examples/screens/welcome_screen.dart';
+import 'package:getx_examples/services/auth_services.dart';
 
-void main() {
+void main() async {
+  Get.put(AuthService());
+
   runApp(const MyApp());
 }
 
@@ -31,6 +35,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: "/home", page: () => const HomeScreen()),
         GetPage(name: "/welcome", page: () => const WelcomeScreen()),
+        GetPage(name: "/login", page: () => const LoginScreen()),
       ],
     );
   }
